@@ -1,0 +1,64 @@
+/* Estilos generales */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Input y botón con margen */
+.login-container input,
+.login-container button,
+.login-container .footer-logos img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Logo central */
+.login-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .login-container {
+    max-width: 500px;
+    padding: 40px;
+  }
+
+  .login-logo {
+    width: 120px;
+    margin-bottom: 30px;
+  }
+
+  .login-container input,
+  .login-container button {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    max-width: 600px;
+    padding: 60px;
+  }
+
+  .login-logo {
+    width: 150px;
+  }
+
+  .container-logos {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-logos img {
+    max-width: 200px;
+    margin: 10px;
+  }
+}
