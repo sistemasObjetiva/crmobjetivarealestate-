@@ -1,0 +1,100 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Reglas para la colección de usuarios
+    match /users/{userId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir en la colección `users`
+    }
+
+    // Reglas para la colección de empresas
+    match /empresas/{empresaId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir en la colección `empresas`
+    }
+
+    // Reglas para la colección de informacionGeneral
+    match /informacionGeneral/{documentId} {
+      allow read: if request.auth != null; // Permitir solo lectura a usuarios autenticados
+      allow write: if request.auth.token.admin == true; // Permitir escritura solo a administradores
+    }
+
+    // Reglas para la colección de eventos de reporte diario
+    match /eventReporteDiario/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    
+    // Reglas para la colección de eventos de reporte de higiene
+    match /eventReporteHigiene/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    
+    // Reglas para la colección de eventos de reporte de riesgos
+    match /eventReporteRiesgos/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+
+    // Reglas para la colección de eventos de reporte de calidad
+    match /eventReporteCalidad/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /pruebasLaboratorio/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /eventReporteMedioAmbiente/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /manifiestosMedioAmbiente/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    } match /manifiestosFotografias/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /manifiestosVideos/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /listaAsistencia/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /trabajadoresRH/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /presupuestos/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /programas/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /contratistas/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /contratos/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /solicitudes/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /camionesAmbiente/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /pagos/{eventId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /crmobjetivarealestate/{documentId}/users/{userId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+     match /crmobjetivarealestate/{documentId}/empresas/{userId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /crmobjetivarealestate/{documentId}/proyectos/{userId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+    match /crmobjetivarealestate/{documentId}/clientes/{userId} {
+      allow read, write: if request.auth != null; // Permitir a cualquier usuario autenticado leer y escribir
+    }
+  }
+   match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Permitir leer y escribir archivos a los usuarios autenticados
+      allow read, write: if request.auth != null;
+    }
+  }
+}
