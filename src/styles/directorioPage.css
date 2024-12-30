@@ -1,0 +1,138 @@
+
+.barra-iconos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--primary-color);
+  padding: 10px 0;
+  gap: 20px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.directorio-list {
+  width: 100%;
+  padding: 0;
+  border: 2px solid var(--primary-color);
+  border-top: none;
+  background-color: #f0f0f0;
+  border-radius: 0 0 8px 8px;
+}
+
+.list-section h2 {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 10px 0; /* Solo relleno vertical */
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center; /* Centra el texto */
+  margin: 0; /* Elimina márgenes */
+}
+.list-section {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .directorio-header h1 {
+    font-size: 1.5rem;
+  }
+  .icono-usuario, .icono-empresa {
+    width: 20px;
+    height: 20px;
+  }
+  .list-section h2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .logo {
+    width: 120px;
+  }
+}
+.user-table {
+  width: 100%;
+  table-layout: fixed; /* Ajusta automáticamente el ancho de las columnas */
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th, .user-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: clamp(12px, 0.9vw, 14px); /* Tamaño de fuente adaptativo */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+  word-wrap: break-word; /* Permite dividir el texto en la siguiente línea si es necesario */
+}
+
+.sticky-header th {
+  position: sticky;
+  top: 20px; /* La posición relativa a la franja azul */
+  background-color: #f0f0f0;
+  z-index: 5;
+  font-size: clamp(6px, 1vw, 8px); /* Tamaño adaptable también en el encabezado */
+  padding: 10px;
+}
+
+.user-table thead th {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.ilst-section {
+  margin-bottom: 20px;
+}
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 60px; /* Espacio suficiente para la franja azul */
+  z-index: 5;
+}
+
+.header-table th {
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: left;
+  border-bottom: 2px solid var(--primary-color);
+}
+.scrollable-content {
+  max-height: calc(100vh - 200px); /* Ajusta para que el footer sea visible */
+  overflow-y: auto;
+}
+
+.empresa-header {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+.directorio-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.directorio-icon {
+  width: 80px;
+  height: auto;
+}
+
+.directorio-header h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1.2;
+}

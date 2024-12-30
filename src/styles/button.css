@@ -1,0 +1,23 @@
+.primary-button {
+    background-color: var(--button-color); /* Azul oscuro */
+    color: var(--button-text-color); /* Blanco */
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--secondary-color); /* Cambia a verde en hover */
+  }
+  
+  
+  .primary-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }

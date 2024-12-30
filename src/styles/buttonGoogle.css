@@ -1,0 +1,27 @@
+.google-button {
+    background-color: white;
+    color: #757575; /* Texto gris */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botón ocupa todo el ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Para alinear el logo y el texto */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 10px; /* Espacio entre el logo y el texto */
+    transition: background-color 0.3s ease;
+  }
+  
+  .google-button:hover {
+    background-color: #f5f5f5; /* Ligero cambio de color al hacer hover */
+  }
+  
+  .google-button img {
+    width: 20px; /* Tamaño del logo de Google */
+    height: auto;
+  }
+  

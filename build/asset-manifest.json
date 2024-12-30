@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6211ae1b.css",
+    "main.js": "/static/js/main.1dbb7132.js",
+    "static/js/488.414b389f.chunk.js": "/static/js/488.414b389f.chunk.js",
+    "static/media/logoObjetiva.png": "/static/media/logoObjetiva.bed5db8ea6f222c01766.png",
+    "static/media/iconoRH.jpg": "/static/media/iconoRH.78b308382140c29aae49.jpg",
+    "static/media/logoObjetivaRealEstate.png": "/static/media/logoObjetivaRealEstate.3de607464f302f85d39d.png",
+    "static/media/iconoDireccion.jpg": "/static/media/iconoDireccion.9f7de1a2f96e802d20f2.jpg",
+    "index.html": "/index.html",
+    "main.6211ae1b.css.map": "/static/css/main.6211ae1b.css.map",
+    "main.1dbb7132.js.map": "/static/js/main.1dbb7132.js.map",
+    "488.414b389f.chunk.js.map": "/static/js/488.414b389f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6211ae1b.css",
+    "static/js/main.1dbb7132.js"
+  ]
+}
